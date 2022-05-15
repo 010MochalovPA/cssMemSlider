@@ -65,25 +65,25 @@ body{
   justify-content: end;
 }
 
+
 .circle{
-  display: block;
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-  transition: all 1s ease;
-}
-.circle::after{
-  content: "";
-  text-align: center;
-  margin: 15px;
+  padding: 15px;
   display: block;
   width: 20px;
   height: 20px;
+}
+.control{
+  display: block;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: #3b3b3b solid 6px;
   background-color: #2bcbba;
 }
-.circle:hover::after{
+.circle:hover{
+  cursor: pointer;
+}
+.circle:hover > .control{
   background-color: bisque;
 }
 
@@ -92,52 +92,52 @@ input[name="radioinput"]{
   visibility: hidden;
 }
 
-#first:checked ~ .slider .slides .slide:nth-child(1){
+#first:checked ~ .slider .slides .slide-main{
   margin-left: 0;
 }
 
-#first:checked ~ .texter .texts .text:nth-child(1){
+#first:checked ~ .texter .texts .text-main{
   margin-left: 0;
 }
 
-#first:checked ~ #controls  label[for="first"]::after{
+#first:checked ~ #controls label[for="first"] .control{
   background: #3b3b3b !important;
 }
 
-#second:checked ~ .slider .slides .slide:nth-child(1){
+#second:checked ~ .slider .slides .slide-main{
   margin-left: -25%;
 }
 
-#second:checked ~ .texter .texts .text:nth-child(1){
+#second:checked ~ .texter .texts .text-main{
   margin-left: -25%;
 }
 
 
-#second:checked ~ #controls label[for="second"]::after{
+#second:checked ~ #controls label[for="second"] .control{
   background: #3b3b3b !important;
 }
 
-#third:checked ~ .slider .slides .slide:nth-child(1){
+#third:checked ~ .slider .slides .slide-main{
   margin-left: -50%;
 }
 
-#third:checked ~ .texter .texts .text:nth-child(1){
+#third:checked ~ .texter .texts .text-main{
   margin-left: -50%;
 }
 
-#third:checked ~ #controls label[for="third"]::after{
+#third:checked ~ #controls label[for="third"] .control{
   background: #3b3b3b !important;
 }
 
-#fourth:checked ~ .slider .slides .slide:nth-child(1){
+#fourth:checked ~ .slider .slides .slide-main{
   margin-left: -75%;
 }
 
-#fourth:checked ~ .texter .texts .text:nth-child(1){
+#fourth:checked ~ .texter .texts .text-main{
   margin-left: -75%;
 }
 
-#fourth:checked ~ #controls label[for="fourth"]::after{
+#fourth:checked ~ #controls label[for="fourth"] .control{
   background: #3b3b3b !important;
 }
 
