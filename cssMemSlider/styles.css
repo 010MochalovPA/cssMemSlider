@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #2bcbba;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.slider{
+  width: 100%;
+  height: 60vh;
+  margin: 0 auto;
+  overflow: hidden;
+  
+  border-radius: 6px;
+}
+
+.slides{
+  display: flex;
+  width: 400%;
+  height: 100%; 
+}
+
+.slide{
+  background: url("./assets/donut.png");
+  background-size: cover;
+  width: 25%;
+  height: 100%;
+  transition: all 1s ease;
+}
+
+
+.slide > img{
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.texter{
+  width: 70%;
+  height: 300px;
+  overflow: hidden;
+}
+.texts{
+  display: flex;
+  width: 400%;
+  height: 100%; 
+}
+.text{
+  width: 25%;
+  height: 100%;
+  transition: all 1s ease;
+  font-size: 24px;
+  margin-top: 5px;
+}
+#controls{
+  width: 30%;
+  height: 300px;
+  display: flex;
+  justify-content: end;
+}
+
+.circle{
+  display: block;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.circle::after{
+  content: "";
+  text-align: center;
+  margin: 15px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #3b3b3b solid 6px;
+  background-color: #2bcbba;
+}
+.circle:hover::after{
+  background-color: bisque;
+}
+
+input[name="radioinput"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+#first:checked ~ .slider .slides .slide:nth-child(1){
+  margin-left: 0;
+}
+
+#first:checked ~ .texter .texts .text:nth-child(1){
+  margin-left: 0;
+}
+
+#first:checked ~ #controls  label[for="first"]::after{
+  background: #3b3b3b !important;
+}
+
+#second:checked ~ .slider .slides .slide:nth-child(1){
+  margin-left: -25%;
+}
+
+#second:checked ~ .texter .texts .text:nth-child(1){
+  margin-left: -25%;
+}
+
+
+#second:checked ~ #controls label[for="second"]::after{
+  background: #3b3b3b !important;
+}
+
+#third:checked ~ .slider .slides .slide:nth-child(1){
+  margin-left: -50%;
+}
+
+#third:checked ~ .texter .texts .text:nth-child(1){
+  margin-left: -50%;
+}
+
+#third:checked ~ #controls label[for="third"]::after{
+  background: #3b3b3b !important;
+}
+
+#fourth:checked ~ .slider .slides .slide:nth-child(1){
+  margin-left: -75%;
+}
+
+#fourth:checked ~ .texter .texts .text:nth-child(1){
+  margin-left: -75%;
+}
+
+#fourth:checked ~ #controls label[for="fourth"]::after{
+  background: #3b3b3b !important;
+}
