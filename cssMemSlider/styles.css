@@ -55,7 +55,7 @@ body{
   width: 25%;
   height: 100%;
   transition: all 1s ease;
-  font-size: 24px;
+  font-size: 36px;
   margin-top: 5px;
 }
 #controls{
@@ -139,4 +139,21 @@ input[name="radioinput"]{
 
 #fourth:checked ~ #controls label[for="fourth"]::after{
   background: #3b3b3b !important;
+}
+
+@media (max-width: 321px){
+  .slider{
+    height: 38vh;
+    order: 1;
+  }
+  #controls{
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    order:2;
+  }
+  .texter{
+    width: 100%;
+    order:3;
+  }
 }
