@@ -90,8 +90,8 @@ body{
 }
 
 input[name="radioinput"]{
-  position: absolute;
   visibility: hidden;
+  display: none;
 }
 
 #first:checked ~ .slider .slides .slide-main{
