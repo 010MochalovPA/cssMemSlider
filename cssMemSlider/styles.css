@@ -80,6 +80,7 @@ body{
   border-radius: 50%;
   border: #2bcbba solid 0.375rem;
   background-color: #2bcbba;
+  transition: all .5s;
 }
 .circle:hover{
   cursor: pointer;
